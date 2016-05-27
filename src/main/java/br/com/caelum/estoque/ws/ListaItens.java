@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * <p>Classe Java de listaItens complex type.
  * 
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
+ * <p>O seguinte fragmento do esquema especifica o conteï¿½do esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="listaItens">
@@ -64,4 +64,11 @@ public class ListaItens {
         return this.item;
     }
 
+    @Override
+    public String toString() {
+        if(this.item == null) {
+            this.item = new ArrayList<Item>();
+        }
+        return this.item.toString();
+    }
 }
